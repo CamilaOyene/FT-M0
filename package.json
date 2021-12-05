@@ -16,10 +16,16 @@
     "testURL": "http://localhost/"
   },
   "dependencies": {
+    "all": "^0.0.0",
     "axios": "^0.21.4",
+    "dependencies": "^0.0.1",
     "git-remote-origin-url": "^3.1.0",
     "git-url-parse": "^11.6.0",
-    "simple-git": "^2.45.1"
+    "in": "^0.19.0",
+    "install": "^0.13.0",
+    "project": "^0.1.6",
+    "simple-git": "^2.45.1",
+    "the": "^1.0.2",
+    "your": "^0.2.3"
   }
 }
-
