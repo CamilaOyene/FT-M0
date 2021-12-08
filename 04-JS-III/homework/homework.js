@@ -58,9 +58,9 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var aux= palabra[0]
+  var aux= palabras[0]
   for(var i=1; i< palabras.length; i++){
-    aux += aux[i] + " " + palabras.length[i] 
+    aux = aux + " " + palabras[i]
   }
   return aux
 }
@@ -70,11 +70,9 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  var elemento=0
-  for(var i=1 ; i< array.length ; i++) {
-    if(array[i] === elemento)
-     return true
-  } 
+  for(let i=0 ; i< array.length; i++) {
+    if(array[i] == elemento) return true
+} return false
 }
 
 
@@ -83,9 +81,9 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   var sum= numeros[0]
-  for(var i=1 ; i<numeros.length ; i++){
-    sum += numeros[i]
-  }
+  for(var i=1 ; i< numeros.length; i++){
+    sum+= numeros[i]  
+  } 
   return sum
 }
 
@@ -95,10 +93,10 @@ function promedioResultadosTest(resultadosTest) {
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
   var promedio=0
-  for(var i=0 ; i<resultadosTest.length ; i++) {
-  promedio += resultadoTest[i]  
-  } 
-  return promedio/resultadosTest.length[i]
+  for (var i = 0; i < resultadosTest.length; i++) {
+    promedio+= resultadosTest[i]
+  }
+    return promedio/resultadosTest.length
 }
 
 
@@ -106,6 +104,11 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var mayor= numeros[0]
+  for(var i=0 ; i < numeros.length ; i++) {
+    if(numeros[i]> mayor) mayor = numeros[i]
+  } return mayor
+
 }
 
 
@@ -113,6 +116,10 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+  var tabla6=[]
+  for(var i=0 ; i<= 10; i++) {
+    tabla6.push(i*6) }
+    return tabla6
   
 }
 
@@ -120,13 +127,23 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length === 0) return 0
+
+  var aux= 1
+  for(var i=0 ; i< arguments.length; i++){
+      aux= aux * arguments[i]
+  } return aux
+
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var cont=0
+  for(var i=0; i<arreglo.length ; i++){
+    if(arreglo[i] > 18) cont++
+  } return cont
 }
 
 
